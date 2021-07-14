@@ -1,0 +1,87 @@
+<!-- HTML program to wish a user at different times of the day -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q2</title>
+	<style type="text/css">
+		body
+		{
+			background-color: black;
+		}
+		#clock 
+		{
+			color: yellow;
+			font-size: 110px;
+			width: 900px;
+			margin: 200px;
+			text-align: center;
+			border: 2px solid yellow;
+			border-radius: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="clock"></div>
+	<script type="text/javascript" src="q2.js">
+
+	setInterval(showTime, 1000);
+		function showTime() 
+		{
+			let time = new Date();
+			let hour = time.getHours();
+			let min = time.getMinutes();
+			let sec = time.getSeconds();
+			am_pm = "AM";
+			
+			if (hour > 12) 
+			{
+				hour -= 12;
+				am_pm = "PM";
+			}
+			
+			if (hour == 0) 
+			{
+				hr = 12;
+				am_pm = "AM";
+			}
+
+			hour = hour < 10 ? "0" + hour : hour;
+			min = min < 10 ? "0" + min : min;
+			sec = sec < 10 ? "0" + sec : sec;
+			
+			let currentTime = hour + ":" + min + ":" + sec + am_pm;
+			
+			document.getElementById("clock")
+			.innerHTML = currentTime;
+		}
+		
+		function wishUser() 
+		{
+			let t = new Date();
+			let hours = t.getHours();
+			if(hours>=5 && hours<=11) 
+			{
+				alert("Good Morning User");
+			} 
+			else if(hours<=15 && hours>=12) 
+			{
+				alert("Good afternoon User");
+			} 
+			else if(hours>=16 && hours<=19) 
+			{
+				alert("Good Evening User");
+			} 
+			else 
+			{
+				alert("Good night User");
+			}
+		}
+		
+	showTime();
+	wishUser();
+
+	</script>
+</body>
+</html>
