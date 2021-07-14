@@ -1,0 +1,39 @@
+<!-- HTML program to create hyperlinks -->
+
+
+<!-- Creating a simple hyperlink -->
+<!DOCTYPE html>
+<html>
+<head>Internet Techologies</head><br></br>
+<title>HTML2</title>
+<body>
+<a href ="https://manipal.edu/mu.html">Manipal University</a>
+</body>
+</html>
+
+
+<!-- Creating hyperlink for an image -->
+<!DOCTYPE html>
+<html>
+<head>Internet Technologies</head>
+<br></br>
+<title>HTML2</title>
+<body>
+<a href ="https://manipal.edu/mu.html">Manipal University<img src="manipal.jpg" alt = "MAHE" width = 200 height = 200></a>
+</body>
+</html>
+
+
+
+<!-- Creating hyperlink to open the link in a new tab -->
+<!DOCTYPE html>
+<html>
+<head>Internet Technologies</head>
+<br></br>
+<title>HTML2</title>
+<body>
+<a href ="https://manipal.edu/mu.html">Manipal University<img src="manipal.jpg" alt = "MAHE" width = 200 height = 200></a>
+<a href ="https://manipal.edu/mu.html" target=_blank>Manipal University in a new tab</a>
+</body>
+</html>
+
